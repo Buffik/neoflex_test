@@ -1,10 +1,7 @@
-import { ComponentProps, ElementType } from 'react';
-import cn from 'classnames';
+import React, { ComponentProps, ElementType } from 'react';
 
 type ButtonOwnProps<E extends ElementType = ElementType> = {
-  children: string;
-  primary?: boolean;
-  secondary?: boolean;
+  children: React.ReactElement;
   as?: E;
 };
 
@@ -15,18 +12,11 @@ const defaultElement = 'button';
 
 function Button<E extends ElementType = typeof defaultElement>({
   children,
-  primary,
-  secondary,
   as,
   ...otherProps
 }: ButtonProps<E>) {
-  const classes = cn({ primary, secondary });
   const TagName = as || defaultElement;
-  return (
-    <TagName className={classes} {...otherProps}>
-      {children}
-    </TagName>
-  );
+  return <TagName {...otherProps}>{children}</TagName>;
 }
 
 export default Button;

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+:root {
+  --primary-font-color: #1c1c27;
+  --accent-color: #ffa542;
+  --additional-color: #838383;
+  --logo-color: #101010;
+  --page-bg-color: #eaeaea;
+}
+
+* {
+  color: var(--primary-font-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+  background-color: var(--page-bg-color);
+}
+
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 30.5px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+  text-transform: capitalize;
+  color: black;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.headPhonesTitle {
+  color: var(--additional-color);
+  margin-bottom: 20px;
+}

@@ -1,4 +1,4 @@
-import { HeadPhones, HeadPhonesCard } from './model';
+import { HeadPhonesCard } from './model';
 import Image_1 from '../images/Image_1.png';
 import Image_2 from '../images/Image_2.png';
 import Image_3 from '../images/Image_3.png';
@@ -11,8 +11,8 @@ export const headPhones: HeadPhonesCard[] = [
     id: 1,
     name: 'Apple BYZ S852I',
     image: Image_1,
-    price: 3527,
-    prevPrice: 600,
+    price: 2927,
+    prevPrice: 3527,
     rating: 4.7,
   },
   {
@@ -84,7 +84,7 @@ export const wireLessHeadPhones: HeadPhonesCard[] = [
   },
 ];
 
-export const headPhonesTypes: HeadPhones = [
-  'Наушники',
-  'Беспроводные наушники',
-];
+export enum headPhonesTypes {
+  HeadPhones = 'Наушники',
+  wireLessHeadPhones = 'Беспроводные наушники',
+}

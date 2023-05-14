@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+.headerIconsContainer {
+  display: flex;
+}
+
+.headerIconsWrapper {
+  display: flex;
+  position: relative;
+}
+
+.likeIcon {
+  margin-right: 45px;
+}
+
+.headerTextCount {
+  position: absolute;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18.3px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0px 5px;
+  left: 16px;
+  bottom: 13px;
+}
