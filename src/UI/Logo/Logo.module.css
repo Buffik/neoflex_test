@@ -1,0 +1,11 @@
+.title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 30.5px;
+}
+
+.title:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}

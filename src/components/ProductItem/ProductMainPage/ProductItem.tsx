@@ -1,11 +1,16 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import TextItem from '../../../UI/TextItem/TextItem';
 import Button from '../../../UI/Button/Button';
 import StarIcon from '../../../UI/Icons/StarIcon';
 import RubleIcon from '../../../UI/Icons/RubleIcon';
 import styles from './ProductItem.module.css';
+import isItemInCart from '../../../utils/isItemInCart';
+import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
+import DataContext from '../../../context/dataContext';
+import handleSessionStorageStore from '../../../utils/handleSessionStorageStore';
 
 interface ProductItem {
+  id: number;
   image: string;
   name: string;
   price: number;
@@ -13,12 +18,36 @@ interface ProductItem {
   rating: number;
 }
 
-function ProductItem({ image, name, price, prevPrice, rating }: ProductItem) {
+function ProductItem({
+  id,
+  image,
+  name,
+  price,
+  prevPrice,
+  rating,
+}: ProductItem) {
   enum BUTTON_TEXT {
     buy = 'купить',
     delete = 'удалить',
   }
-  const [isInCart, setIsInCart] = useState(false);
+  const data = useContext(DataContext);
+
+  const [isInCart, setIsInCart] = useState(isItemInCart(id));
+  const handleClick = () => {
+    const item = {
+      id,
+      image,
+      name,
+      price,
+      count: 1,
+    };
+    setDataToSessionStorage(item, id);
+    setIsInCart(!isInCart);
+    if (data) {
+      data.setData(handleSessionStorageStore());
+    }
+  };
+
   return (
     <div className={styles.productWrapper}>
       <img className={styles.productImage} src={image} alt={name} />
@@ -44,7 +73,7 @@ function ProductItem({ image, name, price, prevPrice, rating }: ProductItem) {
           <StarIcon propClasses={['mainPage__icon', 'rateIcon']} />
           <TextItem>{rating}</TextItem>
         </div>
-        <Button type="button">
+        <Button type="button" onClick={handleClick}>
           <>{isInCart ? BUTTON_TEXT.delete : BUTTON_TEXT.buy}</>
         </Button>
       </div>

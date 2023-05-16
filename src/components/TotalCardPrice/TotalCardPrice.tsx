@@ -5,7 +5,7 @@ import Button from '../../UI/Button/Button';
 import styles from './TotalCardPrice.module.css';
 
 type TotalCardPriceProp = {
-  totalPrice: number;
+  totalPrice: string;
 };
 
 function TotalCardPrice({ totalPrice }: TotalCardPriceProp) {

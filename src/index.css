@@ -31,13 +31,6 @@ body {
   background-color: var(--page-bg-color);
 }
 
-h1 {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 25px;
-  line-height: 30.5px;
-}
-
 button {
   background: none;
   border: none;

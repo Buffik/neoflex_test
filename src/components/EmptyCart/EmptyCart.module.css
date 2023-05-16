@@ -1,0 +1,16 @@
+.wrapper {
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}

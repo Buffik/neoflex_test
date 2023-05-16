@@ -1,7 +1,7 @@
 import { ComponentProps, ElementType } from 'react';
 
 type TextOwnProps<E extends ElementType = ElementType> = {
-  children: string | number;
+  children: string | number | React.ReactElement;
   as?: E;
 };
 
