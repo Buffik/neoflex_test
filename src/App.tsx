@@ -1,30 +1,27 @@
-import React from 'react';
-import { headPhones, headPhonesTypes } from './assets/data/headPhonesData';
-import ProductItem from './components/ProductItem/ProductMainPage/ProductItem';
+import {
+  headPhones,
+  wireLessHeadPhones,
+  headPhonesTypes,
+} from './assets/data/headPhonesData';
 import Header from './components/Header/Header';
-import MainLayout from './components/Layouts/MainLayout';
-import TextItem from './UI/TextItem/TextItem';
+import MainWrapper from './components/Layouts/MainLayout/MainWrapper';
+import Footer from './components/Footer/Footer';
+import ProductGroup from './modules/ProductGroup/ProductGroup';
+import Main from './components/Layouts/Main/Main';
 
 function App() {
   return (
-    <MainLayout>
+    <MainWrapper>
       <Header />
-      <TextItem className="headPhonesTitle">
-        {headPhonesTypes.HeadPhones}
-      </TextItem>
-      {headPhones.map((item) => {
-        return (
-          <ProductItem
-            key={item.id}
-            image={item.image}
-            name={item.name}
-            price={item.price}
-            prevPrice={item.prevPrice}
-            rating={item.rating}
-          />
-        );
-      })}
-    </MainLayout>
+      <Main>
+        <ProductGroup title={headPhonesTypes.HeadPhones} data={headPhones} />
+        <ProductGroup
+          title={headPhonesTypes.wireLessHeadPhones}
+          data={wireLessHeadPhones}
+        />
+      </Main>
+      <Footer />
+    </MainWrapper>
   );
 }
 

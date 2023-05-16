@@ -4,24 +4,27 @@ import TextItem from '../../UI/TextItem/TextItem';
 import LikeIcon from '../../UI/Icons/LikeIcon';
 import CartIcon from '../../UI/Icons/CartIcon';
 import Button from '../../UI/Button/Button';
+import Logo from '../../UI/Logo/Logo';
 
 function Header() {
   return (
-    <div className={styles.wrapper}>
-      <TextItem as="h1">qpick</TextItem>
+    <header className={styles.wrapper}>
+      <Logo />
       <div className={styles.headerIconsContainer}>
         <Button className={styles.headerIconsWrapper}>
           <>
-            <LikeIcon propClasses={[styles.likeIcon]} />
+            <LikeIcon propClasses={['']} />
             <TextItem className={styles.headerTextCount}>2</TextItem>
           </>
         </Button>
-        <div className={styles.headerIconsWrapper}>
-          <CartIcon propClasses={['cartIcon']} />
-          <TextItem className={styles.headerTextCount}>2</TextItem>
-        </div>
+        <Button className={styles.headerIconsWrapper}>
+          <>
+            <CartIcon propClasses={['cartIcon']} />
+            <TextItem className={styles.headerTextCount}>2</TextItem>
+          </>
+        </Button>
       </div>
-    </div>
+    </header>
   );
 }
 
