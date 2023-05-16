@@ -13,10 +13,17 @@
   background-color: white;
 }
 
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 54px;
+  height: 100%;
+  max-height: 237px;
+}
+
 .productImage {
   max-width: 220px;
   height: auto;
-  margin-bottom: 54px;
 }
 
 .twoColumnWrapper {

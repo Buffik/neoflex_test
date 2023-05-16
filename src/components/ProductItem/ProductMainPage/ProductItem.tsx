@@ -50,7 +50,9 @@ function ProductItem({
 
   return (
     <div className={styles.productWrapper}>
-      <img className={styles.productImage} src={image} alt={name} />
+      <div className={styles.imageWrapper}>
+        <img className={styles.productImage} src={image} alt={name} />
+      </div>
       <div className={styles.twoColumnWrapper}>
         <TextItem>{name}</TextItem>
         <div className={styles.priceWrapper}>
