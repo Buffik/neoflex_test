@@ -27,12 +27,12 @@ function ProductItem({ image, name, price, prevPrice, rating }: ProductItem) {
         <div className={styles.priceWrapper}>
           <div className={styles.price}>
             <TextItem>{price}</TextItem>
-            <RubleIcon propClasses={['mainPage__icon', 'rubleIcon']} />
+            <RubleIcon propClasses={['']} />
           </div>
           {prevPrice ? (
             <div className={styles.priceDiscount}>
               <TextItem>{prevPrice}</TextItem>
-              <RubleIcon propClasses={['mainPage__icon', 'rubleIcon']} />
+              <RubleIcon propClasses={['']} />
             </div>
           ) : (
             ''
