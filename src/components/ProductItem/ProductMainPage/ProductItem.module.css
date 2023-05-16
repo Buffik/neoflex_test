@@ -84,3 +84,8 @@
 .rate > div {
   color: var(--additional-color);
 }
+
+.itemButton:hover {
+  color: var(--accent-color);
+  transition: 0.3s;
+}

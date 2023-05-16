@@ -72,10 +72,14 @@ function ProductItem({
       </div>
       <div className={styles.twoColumnWrapper}>
         <div className={styles.rate}>
-          <StarIcon propClasses={['mainPage__icon', 'rateIcon']} />
+          <StarIcon propClasses={['']} />
           <TextItem>{rating}</TextItem>
         </div>
-        <Button type="button" onClick={handleClick}>
+        <Button
+          className={styles.itemButton}
+          type="button"
+          onClick={handleClick}
+        >
           <>{isInCart ? BUTTON_TEXT.delete : BUTTON_TEXT.buy}</>
         </Button>
       </div>
