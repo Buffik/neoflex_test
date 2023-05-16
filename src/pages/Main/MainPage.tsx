@@ -8,15 +8,13 @@ import ProductGroup from '../../modules/ProductGroup/ProductGroup';
 
 function MainPage() {
   return (
-    <>
-      <Main>
-        <ProductGroup title={headPhonesTypes.HeadPhones} data={headPhones} />
-        <ProductGroup
-          title={headPhonesTypes.wireLessHeadPhones}
-          data={wireLessHeadPhones}
-        />
-      </Main>
-    </>
+    <Main>
+      <ProductGroup title={headPhonesTypes.HeadPhones} data={headPhones} />
+      <ProductGroup
+        title={headPhonesTypes.wireLessHeadPhones}
+        data={wireLessHeadPhones}
+      />
+    </Main>
   );
 }
 
