@@ -1,5 +1,4 @@
 import Logo from '../../UI/Logo/Logo';
-import Button from '../../UI/Button/Button';
 import LanguageIcon from '../../UI/Icons/LanguageIcon';
 import TextItem from '../../UI/TextItem/TextItem';
 

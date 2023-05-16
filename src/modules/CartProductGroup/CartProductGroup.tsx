@@ -1,11 +1,7 @@
-import React from 'react';
-import { useContext, useState } from 'react';
-import { HeadPhonesCard } from '../../assets/data/model';
-import TextItem from '../../UI/TextItem/TextItem';
-
+import { useContext } from 'react';
 import styles from './CartProductGroup.module.css';
 import ProductCartItem from '../../components/ProductItem/ProductCartPage/ProductCartItem';
-import DataContext from '../../context/dataContext';
+import DataContext from '../../context/DataContext';
 import EmptyCart from '../../components/EmptyCart/EmptyCart';
 
 function CartProductGroup() {

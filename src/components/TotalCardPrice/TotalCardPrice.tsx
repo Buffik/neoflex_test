@@ -1,4 +1,3 @@
-import React from 'react';
 import TextItem from '../../UI/TextItem/TextItem';
 import Button from '../../UI/Button/Button';
 

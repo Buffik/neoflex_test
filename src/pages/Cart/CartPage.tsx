@@ -5,7 +5,7 @@ import TotalCardPrice from '../../components/TotalCardPrice/TotalCardPrice';
 import styles from './CartPage.module.css';
 import TextItem from '../../UI/TextItem/TextItem';
 import { useContext } from 'react';
-import DataContext from '../../context/dataContext';
+import DataContext from '../../context/DataContext';
 import { storeType } from '../../types/contextTypes';
 import countTotalPrice from '../../utils/countTotalPrice';
 

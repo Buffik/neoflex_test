@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import handleSessionStorageStore from './utils/handleSessionStorageStore';
 import { useState } from 'react';
-import DataContext from './context/dataContext';
+import DataContext from './context/DataContext';
 
 function App() {
   const [data, setData] = useState(handleSessionStorageStore());

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ProductGroup.module.css';
 import TextItem from '../../UI/TextItem/TextItem';
 import { HeadPhonesCard } from '../../assets/data/model';

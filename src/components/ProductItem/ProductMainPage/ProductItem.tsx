@@ -6,7 +6,7 @@ import RubleIcon from '../../../UI/Icons/RubleIcon';
 import styles from './ProductItem.module.css';
 import isItemInCart from '../../../utils/isItemInCart';
 import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
-import DataContext from '../../../context/dataContext';
+import DataContext from '../../../context/DataContext';
 import handleSessionStorageStore from '../../../utils/handleSessionStorageStore';
 
 interface ProductItem {

@@ -1,15 +1,12 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 
 import styles from './ProductCartItem.module.css';
-import { HeadPhonesCard } from '../../../assets/data/model';
 import Button from '../../../UI/Button/Button';
 import TextItem from '../../../UI/TextItem/TextItem';
 import DeleteIcon from '../../../UI/Icons/DeleteIcon';
 import DecreaseButton from '../../../UI/Icons/DecreaseButton';
 import IncreaseButton from '../../../UI/Icons/IncreaseButton';
-import RubleIcon from '../../../UI/Icons/RubleIcon';
-import DataContext from '../../../context/dataContext';
-import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
+import DataContext from '../../../context/DataContext';
 import deleteFromSessionStorage from '../../../utils/deleteFromSessionStorage';
 import decreaseCount from '../../../utils/decreaseCount';
 import increaseCount from '../../../utils/increaseCount';

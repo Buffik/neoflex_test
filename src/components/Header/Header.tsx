@@ -7,7 +7,7 @@ import Button from '../../UI/Button/Button';
 import Logo from '../../UI/Logo/Logo';
 import { useContext, useEffect, useState } from 'react';
 import countItemsInCart from '../../utils/countItemsInCart';
-import DataContext from '../../context/dataContext';
+import DataContext from '../../context/DataContext';
 
 function Header() {
   const data = useContext(DataContext);
