@@ -3,13 +3,14 @@ import { useContext } from 'react';
 import styles from './ProductCartItem.module.css';
 import Button from '../../../UI/Button/Button';
 import TextItem from '../../../UI/TextItem/TextItem';
-import DeleteIcon from '../../../UI/Icons/DeleteIcon';
-import DecreaseButton from '../../../UI/Icons/DecreaseButton';
-import IncreaseButton from '../../../UI/Icons/IncreaseButton';
 import DataContext from '../../../context/DataContext';
 import deleteFromSessionStorage from '../../../utils/deleteFromSessionStorage';
 import decreaseCount from '../../../utils/decreaseCount';
 import increaseCount from '../../../utils/increaseCount';
+import IconItem from '../../../UI/Icons/IconItem';
+import incr from '../../../assets/icons/increaseButton.svg';
+import decr from '../../../assets/icons/decreaseButton.svg';
+import deleteButton from '../../../assets/icons/delete.svg';
 
 interface ProductCartItem {
   id: number;
@@ -55,7 +56,7 @@ function ProductCartItem({ id, image, name, price, count }: ProductCartItem) {
                 handleDecreaseItemCount(id);
               }}
             >
-              <DecreaseButton propClasses={['']} />
+              <IconItem linkToIcon={decr} alt={'decrease button'} />
             </Button>
             <TextItem>{count}</TextItem>
             <Button
@@ -63,7 +64,7 @@ function ProductCartItem({ id, image, name, price, count }: ProductCartItem) {
                 handleIncreaseItemCount(id);
               }}
             >
-              <IncreaseButton propClasses={['']} />
+              <IconItem linkToIcon={incr} alt={'increase button'} />
             </Button>
           </div>
         </div>
@@ -74,7 +75,7 @@ function ProductCartItem({ id, image, name, price, count }: ProductCartItem) {
       </div>
       <div className={styles.rowWrapper}>
         <Button onClick={() => handleDeleteButtonClick(id)}>
-          <DeleteIcon propClasses={['']} />
+          <IconItem linkToIcon={deleteButton} alt={'delete button'} />
         </Button>
         <TextItem>{price * count + ' ₽'}</TextItem>
       </div>

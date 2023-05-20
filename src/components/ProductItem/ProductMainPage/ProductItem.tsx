@@ -1,13 +1,14 @@
 import { useContext, useState } from 'react';
 import TextItem from '../../../UI/TextItem/TextItem';
 import Button from '../../../UI/Button/Button';
-import StarIcon from '../../../UI/Icons/StarIcon';
-import RubleIcon from '../../../UI/Icons/RubleIcon';
+import StarIcon from '../../../assets/icons/like.svg';
+import RubleIcon from '../../../assets/icons/ruble.svg';
 import styles from './ProductItem.module.css';
 import isItemInCart from '../../../utils/isItemInCart';
 import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
 import DataContext from '../../../context/DataContext';
 import handleSessionStorageStore from '../../../utils/handleSessionStorageStore';
+import IconItem from '../../../UI/Icons/IconItem';
 
 interface ProductItem {
   id: number;
@@ -58,12 +59,12 @@ function ProductItem({
         <div className={styles.priceWrapper}>
           <div className={styles.price}>
             <TextItem>{price}</TextItem>
-            <RubleIcon propClasses={['']} />
+            <IconItem linkToIcon={RubleIcon} alt="Ruble" />
           </div>
           {prevPrice ? (
             <div className={styles.priceDiscount}>
               <TextItem>{prevPrice}</TextItem>
-              <RubleIcon propClasses={['']} />
+              <IconItem linkToIcon={RubleIcon} alt="Ruble" />
             </div>
           ) : (
             ''
@@ -72,7 +73,7 @@ function ProductItem({
       </div>
       <div className={styles.twoColumnWrapper}>
         <div className={styles.rate}>
-          <StarIcon propClasses={['']} />
+          <IconItem linkToIcon={StarIcon} alt={'like icon'} />
           <TextItem>{rating}</TextItem>
         </div>
         <Button

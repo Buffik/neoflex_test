@@ -1,12 +1,13 @@
 import Logo from '../../UI/Logo/Logo';
-import LanguageIcon from '../../UI/Icons/LanguageIcon';
+import LanguageIcon from '../../assets/icons/world.svg';
 import TextItem from '../../UI/TextItem/TextItem';
 
 import styles from './Footer.module.css';
-import VKIcon from '../../UI/Icons/VKIcon';
-import TelegramIcon from '../../UI/Icons/TelegramIcon';
+import VKIcon from '../../assets/icons/vk.svg';
+import TelegramIcon from '../../assets/icons/tg.svg';
 import { Link } from 'react-router-dom';
-import WhatsAppIcon from '../../UI/Icons/WhatsAppIcon';
+import WhatsAppIcon from '../../assets/icons/wa.svg';
+import IconItem from '../../UI/Icons/IconItem';
 
 function Footer() {
   return (
@@ -21,16 +22,32 @@ function Footer() {
         <div className={styles.linksRowWrapper}>
           <Link to="/">Условия сервиса</Link>
           <div className={styles.linksLangWrapper}>
-            <LanguageIcon propClasses={[styles.languageIcon]} />
+            <IconItem
+              propClasses={[styles.languageIcon]}
+              linkToIcon={LanguageIcon}
+              alt={'language icon'}
+            />
             <TextItem className={styles.LangTextRus}>Рус</TextItem>
             <TextItem className={styles.LangTextEng}>Eng</TextItem>
           </div>
         </div>
       </div>
       <div className={styles.iconsWrapper}>
-        <VKIcon propClasses={[styles.footerIcon]} />
-        <TelegramIcon propClasses={[styles.footerIcon]} />
-        <WhatsAppIcon propClasses={[styles.footerIcon]} />
+        <IconItem
+          propClasses={[styles.footerIcon]}
+          linkToIcon={VKIcon}
+          alt="VKontakte"
+        />
+        <IconItem
+          propClasses={[styles.footerIcon]}
+          linkToIcon={TelegramIcon}
+          alt="Telegram"
+        />
+        <IconItem
+          propClasses={[styles.footerIcon]}
+          linkToIcon={WhatsAppIcon}
+          alt="WhatsApp"
+        />
       </div>
     </footer>
   );
