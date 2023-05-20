@@ -55,16 +55,7 @@
   font-size: 13px;
   line-height: 15.9px;
   color: var(--accent-color);
-}
-
-.priceDiscount::before {
-  content: '';
-  border-bottom: 1px solid var(--accent-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(50% - 1px);
+  text-decoration: line-through;
 }
 
 .priceDiscount > div {

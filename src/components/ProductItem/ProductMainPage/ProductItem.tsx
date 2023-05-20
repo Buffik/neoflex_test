@@ -58,13 +58,11 @@ function ProductItem({
         <TextItem>{name}</TextItem>
         <div className={styles.priceWrapper}>
           <div className={styles.price}>
-            <TextItem>{price}</TextItem>
-            <IconItem linkToIcon={RubleIcon} alt="Ruble" />
+            <TextItem>{price + ' ₽'}</TextItem>
           </div>
           {prevPrice ? (
             <div className={styles.priceDiscount}>
-              <TextItem>{prevPrice}</TextItem>
-              <IconItem linkToIcon={RubleIcon} alt="Ruble" />
+              <TextItem>{prevPrice + ' ₽'}</TextItem>
             </div>
           ) : (
             ''
