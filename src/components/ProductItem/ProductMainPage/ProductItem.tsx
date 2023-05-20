@@ -2,7 +2,6 @@ import { useContext, useState } from 'react';
 import TextItem from '../../../UI/TextItem/TextItem';
 import Button from '../../../UI/Button/Button';
 import StarIcon from '../../../assets/icons/like.svg';
-import RubleIcon from '../../../assets/icons/ruble.svg';
 import styles from './ProductItem.module.css';
 import isItemInCart from '../../../utils/isItemInCart';
 import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
