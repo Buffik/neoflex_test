@@ -10,6 +10,7 @@ class handleSessionStorageData {
     const currentProducts = window.sessionStorage.getItem(
       keyStorage.sessionKey
     );
+
     if (!currentProducts) {
       const dataStorage: storeValueList = [];
       window.sessionStorage.setItem(

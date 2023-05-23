@@ -1,8 +1,8 @@
 .title {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 25px;
-  line-height: 30.5px;
+  font-size: 25rem;
+  line-height: 122%;
 }
 
 .title:hover {

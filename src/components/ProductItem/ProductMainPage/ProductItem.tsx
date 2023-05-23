@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import TextItem from 'UI/TextItem/TextItem';
 import Button from 'UI/Button/Button';
 import StarIcon from 'assets/icons/like.svg';
@@ -30,9 +30,11 @@ function ProductItem({
   }
   const data = useContext(DataContext);
 
-  const [isInCart, setIsInCart] = useState(
-    handleSessionStorageData.isItemInStorage(data?.cartItems, id)
-  );
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    setIsInCart(handleSessionStorageData.isItemInStorage(data?.cartItems, id));
+  }, [data, id]);
 
   const handleClick = () => {
     const item = {
