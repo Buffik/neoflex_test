@@ -3,11 +3,9 @@ import TextItem from '../../../UI/TextItem/TextItem';
 import Button from '../../../UI/Button/Button';
 import StarIcon from '../../../assets/icons/like.svg';
 import styles from './ProductItem.module.css';
-import isItemInCart from '../../../utils/isItemInCart';
-import setDataToSessionStorage from '../../../utils/setDataToSessionStorage';
-import DataContext from '../../../context/DataContext';
-import handleSessionStorageStore from '../../../utils/handleSessionStorageStore';
+import { DataContext } from '../../../context/DataContext';
 import IconItem from '../../../UI/Icons/IconItem';
+import handleSessionStorageData from '../../../utils/handleSessionStorageData';
 
 interface ProductItem {
   id: number;
@@ -32,7 +30,9 @@ function ProductItem({
   }
   const data = useContext(DataContext);
 
-  const [isInCart, setIsInCart] = useState(isItemInCart(id));
+  const [isInCart, setIsInCart] = useState(
+    handleSessionStorageData.isItemInStorage(data?.cartItems, id)
+  );
   const handleClick = () => {
     const item = {
       id,
@@ -41,11 +41,9 @@ function ProductItem({
       price,
       count: 1,
     };
-    setDataToSessionStorage(item, id);
-    setIsInCart(!isInCart);
-    if (data) {
-      data.setData(handleSessionStorageStore());
-    }
+    handleSessionStorageData.toggleItemInData(data?.cartItems, item, id);
+    setIsInCart(handleSessionStorageData.isItemInStorage(data?.cartItems, id));
+    data?.setCartItems(handleSessionStorageData.getData());
   };
 
   return (

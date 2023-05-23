@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styles from './CartProductGroup.module.css';
 import ProductCartItem from '../../components/ProductItem/ProductCartPage/ProductCartItem';
-import DataContext from '../../context/DataContext';
+import { DataContext } from '../../context/DataContext';
 import EmptyCart from '../../components/EmptyCart/EmptyCart';
 
 function CartProductGroup() {
@@ -9,8 +9,8 @@ function CartProductGroup() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapper}>
-        {data && data.data.length ? (
-          data.data.map((item) => {
+        {data && data.cartItems.length ? (
+          data.cartItems.map((item) => {
             return (
               <ProductCartItem
                 key={item.id}

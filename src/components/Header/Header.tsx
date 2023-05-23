@@ -6,16 +6,17 @@ import CartIcon from '../../assets/icons/cart.svg';
 import Button from '../../UI/Button/Button';
 import Logo from '../../UI/Logo/Logo';
 import { useContext, useEffect, useState } from 'react';
-import countItemsInCart from '../../utils/countItemsInCart';
-import DataContext from '../../context/DataContext';
+import { DataContext } from '../../context/DataContext';
 import IconItem from '../../UI/Icons/IconItem';
+import handleSessionStorageData from '../../utils/handleSessionStorageData';
 
 function Header() {
   const data = useContext(DataContext);
   const [itemsInCart, setItemsInCart] = useState(0);
 
   useEffect(() => {
-    if (data) setItemsInCart(countItemsInCart(data.data));
+    if (data?.cartItems)
+      setItemsInCart(handleSessionStorageData.countItemsInCart(data.cartItems));
   }, [data]);
 
   return (

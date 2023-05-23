@@ -5,24 +5,30 @@ import MainPage from './pages/Main/MainPage';
 import CartPage from './pages/Cart/CartPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-import handleSessionStorageStore from './utils/handleSessionStorageStore';
-import { useState } from 'react';
-import DataContext from './context/DataContext';
+import { useEffect, useState } from 'react';
+import { DataContextProvider } from './context/DataContext';
+import handleSessionStorageData from './utils/handleSessionStorageData';
+import { storeValueList } from './types/contextTypes';
 
 function App() {
-  const [data, setData] = useState(handleSessionStorageStore());
+  const [cartItems, setCartItems] = useState<storeValueList>([]);
+
+  useEffect(() => {
+    const sessionData = handleSessionStorageData.init();
+    setCartItems(sessionData);
+  }, []);
 
   return (
     <BrowserRouter>
       <MainWrapper>
-        <DataContext.Provider value={{ data, setData }}>
+        <DataContextProvider value={{ cartItems, setCartItems }}>
           <Header />
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-        </DataContext.Provider>
+        </DataContextProvider>
         <Footer />
       </MainWrapper>
     </BrowserRouter>

@@ -6,7 +6,18 @@ export type storeValue = {
   count: number;
 };
 
+export type storeValueList = storeValue[] | [];
+
 export type storeType = {
-  data: storeValue[];
-  setData: React.Dispatch<React.SetStateAction<storeValue[] | []>>;
+  cartItems: storeValueList;
+  setCartItems: React.Dispatch<React.SetStateAction<storeValueList>>;
 };
+
+export const enum keyStorage {
+  sessionKey = 'qpick',
+}
+
+export const enum buttonActions {
+  increase = 'increase',
+  decrease = 'decrease',
+}
