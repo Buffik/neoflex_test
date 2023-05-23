@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import MainWrapper from './components/Layouts/MainLayout/MainWrapper';
+import Container from './components/Layouts/Container/Container';
 import Footer from './components/Footer/Footer';
 import MainPage from './pages/Main/MainPage';
 import CartPage from './pages/Cart/CartPage';
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <MainWrapper>
+      <Container>
         <DataContextProvider value={{ cartItems, setCartItems }}>
           <Header />
           <Routes>
@@ -30,7 +30,7 @@ function App() {
           </Routes>
         </DataContextProvider>
         <Footer />
-      </MainWrapper>
+      </Container>
     </BrowserRouter>
   );
 }

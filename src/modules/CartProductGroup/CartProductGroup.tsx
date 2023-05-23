@@ -8,24 +8,22 @@ function CartProductGroup() {
   const data = useContext(DataContext);
   return (
     <div className={styles.wrapper}>
-      <div className={styles.wrapper}>
-        {data && data.cartItems.length ? (
-          data.cartItems.map((item) => {
-            return (
-              <ProductCartItem
-                key={item.id}
-                id={item.id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                count={item.count}
-              />
-            );
-          })
-        ) : (
-          <EmptyCart />
-        )}
-      </div>
+      {data?.cartItems.length ? (
+        data.cartItems.map(({ id, image, name, price, count }) => {
+          return (
+            <ProductCartItem
+              key={id}
+              id={id}
+              image={image}
+              name={name}
+              price={price}
+              count={count}
+            />
+          );
+        })
+      ) : (
+        <EmptyCart />
+      )}
     </div>
   );
 }
