@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { storeType } from '../types/contextTypes';
+import { storeType } from 'types/contextTypes';
 
 export const DataContext = createContext<storeType | null>(null);
 

@@ -1,13 +1,12 @@
-import Logo from '../../UI/Logo/Logo';
-import LanguageIcon from '../../assets/icons/world.svg';
-import TextItem from '../../UI/TextItem/TextItem';
-
-import styles from './Footer.module.css';
-import VKIcon from '../../assets/icons/vk.svg';
-import TelegramIcon from '../../assets/icons/tg.svg';
 import { Link } from 'react-router-dom';
-import WhatsAppIcon from '../../assets/icons/wa.svg';
-import IconItem from '../../UI/Icons/IconItem';
+import Logo from 'UI/Logo/Logo';
+import LanguageIcon from 'assets/icons/world.svg';
+import TextItem from 'UI/TextItem/TextItem';
+import VKIcon from 'assets/icons/vk.svg';
+import TelegramIcon from 'assets/icons/tg.svg';
+import WhatsAppIcon from 'assets/icons/wa.svg';
+import IconItem from 'UI/Icons/IconItem';
+import styles from './Footer.module.css';
 
 function Footer() {
   return (

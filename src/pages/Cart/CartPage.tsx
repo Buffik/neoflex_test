@@ -1,13 +1,13 @@
-import Main from '../../components/Layouts/Main/Main';
-import CartProductGroup from '../../modules/CartProductGroup/CartProductGroup';
-import TotalCardPrice from '../../components/TotalCardPrice/TotalCardPrice';
+import Main from 'components/Layouts/Main/Main';
+import CartProductGroup from 'modules/CartProductGroup/CartProductGroup';
+import TotalCardPrice from 'components/TotalCardPrice/TotalCardPrice';
 
 import styles from './CartPage.module.css';
-import TextItem from '../../UI/TextItem/TextItem';
+import TextItem from 'UI/TextItem/TextItem';
 import { useContext } from 'react';
-import { DataContext } from '../../context/DataContext';
-import { storeType } from '../../types/contextTypes';
-import countTotalPrice from '../../utils/countTotalPrice';
+import { DataContext } from 'context/DataContext';
+import { storeType } from 'types/contextTypes';
+import countTotalPrice from 'utils/countTotalPrice';
 
 function CartPage() {
   const data = useContext(DataContext);

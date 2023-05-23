@@ -1,10 +1,10 @@
 import { HeadPhonesCard } from './model';
-import Image_1 from '../images/Image_1.png';
-import Image_2 from '../images/Image_2.png';
-import Image_3 from '../images/Image_3.png';
-import Image_4 from '../images/Image_4.png';
-import Image_5 from '../images/Image_5.png';
-import Image_6 from '../images/Image_6.png';
+import Image_1 from 'assets/images/Image_1.png';
+import Image_2 from 'assets/images/Image_2.png';
+import Image_3 from 'assets/images/Image_3.png';
+import Image_4 from 'assets/images/Image_4.png';
+import Image_5 from 'assets/images/Image_5.png';
+import Image_6 from 'assets/images/Image_6.png';
 
 export const headPhones: HeadPhonesCard[] = [
   {

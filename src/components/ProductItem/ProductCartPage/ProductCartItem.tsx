@@ -1,15 +1,14 @@
 import { useContext } from 'react';
-
+import { DataContext } from 'context/DataContext';
+import { buttonActions } from 'types/contextTypes';
+import handleSessionStorageData from 'utils/handleSessionStorageData';
+import Button from 'UI/Button/Button';
+import TextItem from 'UI/TextItem/TextItem';
+import IconItem from 'UI/Icons/IconItem';
+import incr from 'assets/icons/increaseButton.svg';
+import decr from 'assets/icons/decreaseButton.svg';
+import deleteButton from 'assets/icons/delete.svg';
 import styles from './ProductCartItem.module.css';
-import Button from '../../../UI/Button/Button';
-import TextItem from '../../../UI/TextItem/TextItem';
-import { DataContext } from '../../../context/DataContext';
-import IconItem from '../../../UI/Icons/IconItem';
-import incr from '../../../assets/icons/increaseButton.svg';
-import decr from '../../../assets/icons/decreaseButton.svg';
-import deleteButton from '../../../assets/icons/delete.svg';
-import handleSessionStorageData from '../../../utils/handleSessionStorageData';
-import { buttonActions } from '../../../types/contextTypes';
 
 interface ProductCartItem {
   id: number;

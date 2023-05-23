@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import TextItem from '../../UI/TextItem/TextItem';
+import TextItem from 'UI/TextItem/TextItem';
 import styles from './EmptyCart.module.css';
 
 function EmptyCart() {

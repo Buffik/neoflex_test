@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import styles from './CartProductGroup.module.css';
-import ProductCartItem from '../../components/ProductItem/ProductCartPage/ProductCartItem';
-import { DataContext } from '../../context/DataContext';
-import EmptyCart from '../../components/EmptyCart/EmptyCart';
+import ProductCartItem from 'components/ProductItem/ProductCartPage/ProductCartItem';
+import { DataContext } from 'context/DataContext';
+import EmptyCart from 'components/EmptyCart/EmptyCart';
 
 function CartProductGroup() {
   const data = useContext(DataContext);

@@ -1,5 +1,5 @@
-import TextItem from '../../UI/TextItem/TextItem';
-import Button from '../../UI/Button/Button';
+import TextItem from 'UI/TextItem/TextItem';
+import Button from 'UI/Button/Button';
 
 import styles from './TotalCardPrice.module.css';
 

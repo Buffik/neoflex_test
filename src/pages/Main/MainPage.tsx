@@ -2,9 +2,9 @@ import {
   headPhonesTypes,
   headPhones,
   wireLessHeadPhones,
-} from '../../assets/data/headPhonesData';
-import Main from '../../components/Layouts/Main/Main';
-import ProductGroup from '../../modules/ProductGroup/ProductGroup';
+} from 'assets/data/headPhonesData';
+import Main from 'components/Layouts/Main/Main';
+import ProductGroup from 'modules/ProductGroup/ProductGroup';
 
 function MainPage() {
   return (

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import TextItem from '../TextItem/TextItem';
 
 import styles from './Logo.module.css';
+import TextItem from 'UI/TextItem/TextItem';
 
 function Logo() {
   return (

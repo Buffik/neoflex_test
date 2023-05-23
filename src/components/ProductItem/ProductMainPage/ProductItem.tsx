@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react';
-import TextItem from '../../../UI/TextItem/TextItem';
-import Button from '../../../UI/Button/Button';
-import StarIcon from '../../../assets/icons/like.svg';
+import TextItem from 'UI/TextItem/TextItem';
+import Button from 'UI/Button/Button';
+import StarIcon from 'assets/icons/like.svg';
 import styles from './ProductItem.module.css';
-import { DataContext } from '../../../context/DataContext';
-import IconItem from '../../../UI/Icons/IconItem';
-import handleSessionStorageData from '../../../utils/handleSessionStorageData';
+import { DataContext } from 'context/DataContext';
+import IconItem from 'UI/Icons/IconItem';
+import handleSessionStorageData from 'utils/handleSessionStorageData';
 
 interface ProductItem {
   id: number;

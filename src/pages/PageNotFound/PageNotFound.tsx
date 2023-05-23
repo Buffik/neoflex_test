@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Main from '../../components/Layouts/Main/Main';
-import TextItem from '../../UI/TextItem/TextItem';
+import Main from 'components/Layouts/Main/Main';
+import TextItem from 'UI/TextItem/TextItem';
 
 import styles from './PageNotFound.module.css';
 

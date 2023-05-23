@@ -1,7 +1,7 @@
 import styles from './ProductGroup.module.css';
-import TextItem from '../../UI/TextItem/TextItem';
-import { HeadPhonesCard } from '../../assets/data/model';
-import ProductItem from '../../components/ProductItem/ProductMainPage/ProductItem';
+import TextItem from 'UI/TextItem/TextItem';
+import { HeadPhonesCard } from 'assets/data/model';
+import ProductItem from 'components/ProductItem/ProductMainPage/ProductItem';
 
 type ProductGroupProps = {
   title: string;
@@ -13,16 +13,16 @@ function ProductGroup({ title, data }: ProductGroupProps) {
     <div>
       <TextItem className={styles.headPhonesTitle}>{title}</TextItem>
       <div className={styles.wrapper}>
-        {data.map((item) => {
+        {data.map(({ id, image, name, price, prevPrice, rating }) => {
           return (
             <ProductItem
-              key={item.id}
-              id={item.id}
-              image={item.image}
-              name={item.name}
-              price={item.price}
-              prevPrice={item.prevPrice}
-              rating={item.rating}
+              key={id}
+              id={id}
+              image={image}
+              name={name}
+              price={price}
+              prevPrice={prevPrice}
+              rating={rating}
             />
           );
         })}
