@@ -30,7 +30,7 @@ class handleSessionStorageData {
   }
 
   static isItemInStorage(data: storeValueList | undefined, id: number) {
-    if (data && data.length) {
+    if (data?.length) {
       return data.some((item) => item.id === id);
     }
     return false;

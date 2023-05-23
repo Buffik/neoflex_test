@@ -33,6 +33,7 @@ function ProductItem({
   const [isInCart, setIsInCart] = useState(
     handleSessionStorageData.isItemInStorage(data?.cartItems, id)
   );
+
   const handleClick = () => {
     const item = {
       id,
@@ -42,7 +43,7 @@ function ProductItem({
       count: 1,
     };
     handleSessionStorageData.toggleItemInData(data?.cartItems, item, id);
-    setIsInCart(handleSessionStorageData.isItemInStorage(data?.cartItems, id));
+    setIsInCart(!isInCart);
     data?.setCartItems(handleSessionStorageData.getData());
   };
 
