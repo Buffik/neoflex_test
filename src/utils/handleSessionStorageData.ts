@@ -52,7 +52,8 @@ class handleSessionStorageData {
         window.sessionStorage.setItem(keyStorage.sessionKey, sessionStorage);
       }
     } else {
-      const sessionStorage = JSON.stringify([productItem]);
+      const updatedData = data ? [...data, productItem] : [productItem];
+      const sessionStorage = JSON.stringify(updatedData);
       window.sessionStorage.setItem(keyStorage.sessionKey, sessionStorage);
     }
   }
