@@ -25,30 +25,30 @@
 }
 
 .languageIcon {
-  margin-right: 17px;
+  margin-right: 17rem;
 }
 
 .iconsWrapper {
   display: flex;
-  height: 30px;
+  height: 30rem;
   align-items: center;
 }
 
 .LangTextRus {
   font-weight: 700;
-  font-size: 15px;
-  line-height: 18.3px;
+  font-size: 15rem;
+  line-height: var(--line-height);
   color: var(--accent-color);
-  margin-right: 17px;
+  margin-right: 17rem;
 }
 
 .LangTextEng {
   font-weight: 700;
-  font-size: 15px;
-  line-height: 18.3px;
+  font-size: 15rem;
+  line-height: var(--line-height);
   color: var(--logo-color);
 }
 
 .footerIcon:not(:last-child) {
-  margin-right: 18px;
+  margin-right: 18rem;
 }

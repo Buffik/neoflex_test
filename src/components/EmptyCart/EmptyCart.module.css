@@ -4,8 +4,9 @@
 
 .title {
   font-weight: 800;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 30rem;
+  line-height: var(--line-height);
+  margin-bottom: 20rem;
   text-align: center;
 }
 

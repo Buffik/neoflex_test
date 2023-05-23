@@ -23,25 +23,25 @@
 }
 
 .controlWrapper {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .productImage {
-  max-width: 146.5px;
+  max-width: 146.5rem;
   height: auto;
-  margin-bottom: 17px;
+  margin-bottom: 17rem;
 }
 
 .titleWrapper {
-  margin-left: 24px;
+  margin-left: 24rem;
 }
 
 .textItem {
   font-weight: 500;
-  margin-bottom: 12px;
+  line-height: var(--line-height);
+  margin-bottom: 12rem;
 }
 
 .textPrice {

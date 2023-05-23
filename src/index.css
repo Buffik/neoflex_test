@@ -5,6 +5,7 @@
   --additional-color: #838383;
   --logo-color: #101010;
   --page-bg-color: #eaeaea;
+  --line-height: 122%;
 }
 
 * {
@@ -30,8 +31,8 @@ a {
 body {
   font-family: 'Montserrat', 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-weight: 600;
-  font-size: 17px;
-  line-height: 20.7px;
+  font-size: 17rem;
+  line-height: var(--line-height);
   background-color: var(--page-bg-color);
 }
 
@@ -40,10 +41,10 @@ button {
   border: none;
   font-family: 'Montserrat', 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-weight: 600;
-  font-size: 17px;
-  line-height: 20.7px;
+  font-size: 17rem;
+  line-height: var(--line-height);
   text-transform: capitalize;
   color: black;
   cursor: pointer;
-  padding: 7px;
+  padding: 7rem;
 }

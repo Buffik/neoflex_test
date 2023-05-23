@@ -1,13 +1,13 @@
 import TextItem from 'UI/TextItem/TextItem';
 import Button from 'UI/Button/Button';
 
-import styles from './TotalCardPrice.module.css';
+import styles from './TotalCartPrice.module.css';
 
 type TotalCardPriceProp = {
   totalPrice: string;
 };
 
-function TotalCardPrice({ totalPrice }: TotalCardPriceProp) {
+function TotalCartPrice({ totalPrice }: TotalCardPriceProp) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.rowWrapper}>
@@ -19,4 +19,4 @@ function TotalCardPrice({ totalPrice }: TotalCardPriceProp) {
   );
 }
 
-export default TotalCardPrice;
+export default TotalCartPrice;
