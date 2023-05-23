@@ -76,7 +76,7 @@ function ProductItem({
           type="button"
           onClick={handleClick}
         >
-          <>{isInCart ? BUTTON_TEXT.delete : BUTTON_TEXT.buy}</>
+          {isInCart ? BUTTON_TEXT.delete : BUTTON_TEXT.buy}
         </Button>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { ComponentProps, ElementType } from 'react';
 
 type ButtonOwnProps<E extends ElementType = ElementType> = {
-  children: React.ReactElement;
+  children: React.ReactElement | string;
   as?: E;
 };
 

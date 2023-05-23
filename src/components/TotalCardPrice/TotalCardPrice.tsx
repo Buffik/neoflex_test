@@ -14,9 +14,7 @@ function TotalCardPrice({ totalPrice }: TotalCardPriceProp) {
         <TextItem className={styles.title}>итого</TextItem>
         <TextItem className={styles.price}>{'₽ ' + totalPrice}</TextItem>
       </div>
-      <Button className={styles.buttonPurchase}>
-        <>Перейти к оформлению</>
-      </Button>
+      <Button className={styles.buttonPurchase}>Перейти к оформлению</Button>
     </div>
   );
 }
